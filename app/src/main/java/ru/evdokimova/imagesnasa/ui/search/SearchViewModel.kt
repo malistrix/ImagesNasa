@@ -41,7 +41,7 @@ class SearchViewModel @Inject constructor(
     }
 
     private fun restorePageImages() = viewModelScope.launch {
-        page = repository.getPage() ?: return@launch
+        page = repository.getPage()
         _imagesLiveData.postValue(repository.getResourceImagesFromDB())
     }
 

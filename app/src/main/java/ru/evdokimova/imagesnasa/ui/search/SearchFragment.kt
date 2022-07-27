@@ -35,7 +35,7 @@ class SearchFragment : Fragment() {
 
     private lateinit var concatAdapter: ConcatAdapter
 
-    private var isNeedScrollPage = false
+    private var isNeedScrollPage = true
 
     private var isNewSearch = false
 
@@ -110,7 +110,7 @@ class SearchFragment : Fragment() {
             )
         }
         imagesAdapter.registerAdapterDataObserver(object : RecyclerView.AdapterDataObserver() {
-            override fun onItemRangeRemoved(positionStart: Int, itemCount: Int) {
+            override fun onItemRangeInserted(positionStart: Int, itemCount: Int) {
                 if (isNeedScrollPage) {
                     isNeedScrollPage = false
                     images_rv.scrollToPosition(0)
