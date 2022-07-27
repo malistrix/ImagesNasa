@@ -14,8 +14,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="?attr/colorPrimary"
-        android:backgroundTint="?attr/colorPrimary"
+        android:weightSum="100"
         app:liftOnScroll="true">
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="30"
+            android:visibility="visible" />
 
         <androidx.appcompat.widget.SearchView
             android:id="@+id/search_view"
@@ -25,14 +31,26 @@
             android:background="@drawable/shape_search"
             android:imeOptions="actionSearch"
             app:iconifiedByDefault="false"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
             app:layout_scrollFlags="scroll|enterAlways|snap"
             app:queryBackground="@android:color/transparent"
             app:queryHint="@string/search"
             app:searchIcon="?android:attr/actionModeWebSearchDrawable"
             tools:tooltipText="@string/app_name" />
+
+        <TextView
+            android:id="@+id/text_welcome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="bottom|center_horizontal"
+            android:paddingHorizontal="5dp"
+            android:paddingBottom="5dp"
+            android:text="@string/welcome_search"
+            android:textSize="35sp"
+            android:textStyle="bold"
+            android:visibility="gone"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            tools:visibility="gone" />
+
     </com.google.android.material.appbar.AppBarLayout>
 
     <androidx.recyclerview.widget.RecyclerView

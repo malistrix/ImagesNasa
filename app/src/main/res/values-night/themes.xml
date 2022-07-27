@@ -12,11 +12,9 @@
         <item name="colorSecondary">@color/purple_300</item>
 
         <!--        рамка поиска-->
-        <item name="colorSecondaryVariant">#644A6F</item>
+        <item name="colorSecondaryVariant">@color/purple_450</item>
         <!-- Surface color. -->
-
-        <item name="colorSurface">#332539</item>
-        <!--        <item name="colorSurface">#332539</item>-->
+        <item name="colorSurface">@color/purple_dark</item>
 
         <!-- Status bar color. -->
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>

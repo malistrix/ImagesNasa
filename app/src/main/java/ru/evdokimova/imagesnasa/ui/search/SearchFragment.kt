@@ -1,5 +1,7 @@
 package ru.evdokimova.imagesnasa.ui.search
 
+import android.app.ActionBar
+import android.graphics.drawable.Drawable
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -70,6 +72,7 @@ class SearchFragment : Fragment() {
                     }
 
                     imageList.data?.let {
+                        if (it.isEmpty()) expandAppBar() else collapseAppBar()
                         (concatAdapter.adapters[0] as ImagesAdapter).differ.submitList(it)
                         val pageAdapter = concatAdapter.adapters[1] as PageAdapter
                         pageAdapter.submitData(viewModel.page)
@@ -99,6 +102,26 @@ class SearchFragment : Fragment() {
                 }
             }
         }
+    }
+
+    private var backgroundSearch: Drawable? = null
+    private fun collapseAppBar() {
+        // background изменялся в expandAppBar()
+        if (backgroundSearch != null) {
+            mBinding.searchAppBar.layoutParams.height = ActionBar.LayoutParams.WRAP_CONTENT
+            mBinding.searchAppBar.background = backgroundSearch
+            mBinding.textWelcome.visibility = View.GONE
+        }
+    }
+
+    private fun expandAppBar() {
+        backgroundSearch = mBinding.searchAppBar.background
+        mBinding.searchAppBar.layoutParams.height = ActionBar.LayoutParams.MATCH_PARENT
+        mBinding.searchAppBar.background = resources.getDrawable(
+            R.drawable.shape_background,
+            requireContext().theme
+        )
+        mBinding.textWelcome.visibility = View.VISIBLE
     }
 
     private fun initAdapter(view: View) {
@@ -178,5 +201,4 @@ class SearchFragment : Fragment() {
             isSubmitButtonEnabled = true
         }
     }
-
 }

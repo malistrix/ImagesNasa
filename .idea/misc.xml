@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/evdok/AndroidStudioProjects/ImagesNasa/app/src/main/res/drawable-night/shape_back.xml" value="0.145" />
         <entry key="..\:/Users/evdok/AndroidStudioProjects/ImagesNasa/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.101" />
         <entry key="..\:/Users/evdok/AndroidStudioProjects/ImagesNasa/app/src/main/res/drawable/ic_baseline_arrow_downward_24.xml" value="0.1155" />
         <entry key="..\:/Users/evdok/AndroidStudioProjects/ImagesNasa/app/src/main/res/drawable/ic_baseline_arrow_upward_24.xml" value="0.1155" />
@@ -13,7 +14,9 @@
         <entry key="..\:/Users/evdok/AndroidStudioProjects/ImagesNasa/app/src/main/res/drawable/ic_launcher_background.xml" value="0.101" />
         <entry key="..\:/Users/evdok/AndroidStudioProjects/ImagesNasa/app/src/main/res/drawable/ic_launcher_grade__foreground_24.xml" value="0.251" />
         <entry key="..\:/Users/evdok/AndroidStudioProjects/ImagesNasa/app/src/main/res/drawable/loading_img.xml" value="0.119" />
-        <entry key="..\:/Users/evdok/AndroidStudioProjects/ImagesNasa/app/src/main/res/drawable/shape_appbar.xml" value="0.1065" />
+        <entry key="..\:/Users/evdok/AndroidStudioProjects/ImagesNasa/app/src/main/res/drawable/shape_appbar.xml" value="0.16" />
+        <entry key="..\:/Users/evdok/AndroidStudioProjects/ImagesNasa/app/src/main/res/drawable/shape_back.xml" value="0.145" />
+        <entry key="..\:/Users/evdok/AndroidStudioProjects/ImagesNasa/app/src/main/res/drawable/shape_background.xml" value="0.145" />
         <entry key="..\:/Users/evdok/AndroidStudioProjects/ImagesNasa/app/src/main/res/drawable/shape_button.xml" value="0.1" />
         <entry key="..\:/Users/evdok/AndroidStudioProjects/ImagesNasa/app/src/main/res/drawable/shape_search.xml" value="0.126" />
         <entry key="..\:/Users/evdok/AndroidStudioProjects/ImagesNasa/app/src/main/res/layout/activity_main.xml" value="0.264" />
