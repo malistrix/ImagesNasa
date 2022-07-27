@@ -1,0 +1,33 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.ImagesNasa" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">#1B141E</item>
+
+        <!--    back card-->
+        <item name="colorPrimaryVariant">#3C2C43</item>
+
+        <item name="colorOnPrimary">@color/black</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/purple_300</item>
+
+        <!--        рамка поиска-->
+        <item name="colorSecondaryVariant">#644A6F</item>
+        <!-- Surface color. -->
+
+        <item name="colorSurface">#332539</item>
+        <!--        <item name="colorSurface">#332539</item>-->
+
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:editTextColor">@color/purple_50</item>
+        <item name="android:textColor">#AE92BD</item>
+    </style>
+
+    <style name="myDefaultButton">
+        <item name="android:textColor">@color/purple_50</item>
+        <item name="android:backgroundTint">#1C151F</item>
+    </style>
+</resources>
