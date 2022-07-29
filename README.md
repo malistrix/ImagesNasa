@@ -12,7 +12,7 @@
 - Glide
 - Hilt 
 - LiveData
-- PhotoView 
+- [PhotoView](https://github.com/Baseflow/PhotoView) 
 
 ## Предварительный просмотр
 <p align="center">
