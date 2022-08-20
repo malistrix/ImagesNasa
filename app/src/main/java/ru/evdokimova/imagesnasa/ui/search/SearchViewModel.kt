@@ -26,7 +26,7 @@ class SearchViewModel @Inject constructor(
 
     var page: PageEntity? = null
 
-    var hasInternet = false
+    private var hasInternet = false
 
     private val observerConnection = Observer<Boolean> { hasInternet ->
         hasInternet?.let {
@@ -50,15 +50,15 @@ class SearchViewModel @Inject constructor(
             val lastData = _imagesLiveData.value?.data
             _imagesLiveData.postValue(Resource.Loading())
             if (hasInternet) {
-                val newImages = repository.getNewResourceImages(query, pageN)
+                var newImages = repository.getNewResourceImages(query, pageN)
                 if (newImages is Resource.Error) {
-                    newImages.data = lastData
+                    newImages = Resource.Error(newImages.message, lastData)
                 } else {
                     page = repository.getPage()
                 }
                 _imagesLiveData.postValue(newImages)
             } else {
-                _imagesLiveData.postValue(Resource.Error(message = "No Internet", lastData))
+                _imagesLiveData.postValue(Resource.Error("No Internet", lastData))
             }
         }
 
